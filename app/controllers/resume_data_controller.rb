@@ -1,0 +1,3 @@
+class ResumeDataController < ApplicationController
+  
+end

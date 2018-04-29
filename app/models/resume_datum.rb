@@ -1,0 +1,3 @@
+class ResumeDatum < ApplicationRecord
+  
+end
