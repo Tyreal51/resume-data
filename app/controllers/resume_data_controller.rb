@@ -16,7 +16,7 @@ class ResumeDataController < ApplicationController
     end
   end
   def update
-    the_id: = params[:id]
+    the_id = params[:id]
     resume_datum = ResumeDatum.find_by(id: the_id)
     resume_datum.update(
       name: params[:input_name],

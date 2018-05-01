@@ -10,7 +10,7 @@ class SkillsController < ApplicationController
     end
   end
   def update
-    the_id: = params[:id]
+    the_id = params[:id]
     skill = skill.find_by(id: the_id)
     skill.update(
       name: params[:input_name]
