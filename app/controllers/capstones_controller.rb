@@ -12,7 +12,7 @@ class CapstonesController < ApplicationController
     end
   end
   def update
-    the_id: = params[:id]
+    the_id = params[:id]
     capstone = capstone.find_by(id: the_id)
     capstone.update(
       name: params[:input_name],
