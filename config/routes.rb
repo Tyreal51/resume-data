@@ -8,9 +8,9 @@ Rails.application.routes.draw do
   # resources :skills
   # resources :capstones
   # resources :experiences
-  shallow do
+  
     resources :students do
         resources :educations, :skills, :capstones, :experiences
     end
-  end
+  
 end
