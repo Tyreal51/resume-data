@@ -1,19 +1,49 @@
+20.times do 
+  Student.create!(
+  first_name: Faker::Name.first_name,
+  last_name: Faker::Name.last_name,
+  email: Faker::Internet.email,
+  phone_number: Faker::PhoneNumber.phone_number,
+  short_bio: "This is a bio",
+  linkedin_url: Faker::Internet.url,
+  twitter_url: Faker::Twitter.user,
+  blog_url: Faker::Internet.url,
+  resume_url: Faker::Internet.url,
+  github_url: Faker::Internet.url,
+  photo: "This is a photo"
+  )
+end
 
 
-
-Education.create(start_date: "May 15, 2017", end_date: "May 1, 2018", degree:"MBA", university_name: "Fairleigh Dickinson University", details:"I consentrated in finance and have 2 summer internships behind my belt. Graduated with honors as Cum Laude")
-Education.create(start_date: "May 1, 2017", end_date: "May 3, 2018", degree:"MBA", university_name: "Ocean County College", details:"I consentrated in accounting and have 2 summer internships behind my belt. Graduated with honors as Cum Laude")
-Education.create(start_date: "May 3, 2017", end_date: "May 3, 2018", degree:"MBA", university_name: "Fairleigh Dickinson University", details:"I consentrated in accounting and have 2 summer internships behind my belt. Graduated with honors as Cum Laude")
-Education.create(start_date: "May 2, 2017", end_date: "May 3, 2018", degree:"MBA", university_name: "Harvard", details:"I am awesome in accounting and have 2 summer internships behind my belt. Graduated with honors as Cum Laude")
-Education.create(start_date: "May 2, 2017", end_date: "May 3, 2018", degree:"MBA", university_name: "Harvard", details:"I am awesome in accounting and have 2 summer internships behind my belt. Graduated with honors as Cum Laude")
-Education.create(start_date: "May 2, 2017", end_date: "May 3, 2018", degree:"MBA", university_name: "Harvard", details:"I am awesome in accounting and have 2 summer internships behind my belt. Graduated with honors as Cum Laude")
-Education.create(start_date: "May 2, 2017", end_date: "May 3, 2018", degree:"MBA", university_name: "Yale", details:"I am awesome in finance and have 2 summer internships behind my belt. Graduated with honors as Cum Laude")
+20.times do 
+    Education.create!(
+      start_date:Faker::Date.between_except(1.year.ago, 1.year.from_now, Date.today),
+      end_date:Faker::Date.between_except(1.year.ago, 1.year.from_now, Date.today),
+      degree:Faker::Superhero.name,
+      university_name:Faker::University.name,
+      details:Faker::Coffee.notes
+    )
+end 
 20.times do
-  experience.create!(
-    start_date: Faker::Date.between_except(1.year.ago, 1.year.from_now, Date.today)
-    end_date: Faker::Date.between_except(1.year.ago, 1.year.from_now, Date.today)
-    job_title: Faker::Job.title
-    company_name: Faker::Company.name
-    job_title: Faker::Job.position
+  Experience.create!(
+    start_date: Faker::Date.between_except(1.year.ago, 1.year.from_now, Date.today),
+    end_date: Faker::Date.between_except(1.year.ago, 1.year.from_now, Date.today),
+    job_title: Faker::Job.title,
+    company_name: Faker::Company.name,
+    details: Faker::Job.position
+  )
+end
+  
+20.times do 
+  Capstone.create!(
+  name: Faker::Name.name,
+  description: Faker::Lorem.paragraph,
+  url: Faker::Internet.domain_name
+  )
+end
+
+20.times do 
+  Skill.create!(
+  skill: Faker::Coffee.variety
   )
 end
