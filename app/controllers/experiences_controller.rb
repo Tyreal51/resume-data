@@ -5,7 +5,7 @@ class ExperiencesController < ApplicationController
 end
 def show
   id = params[:id]
-  experience = Experience.find_by (id: id)
+  experience = Experience.find_by(id: id)
   render json: experience.as_json
 end
 def update
