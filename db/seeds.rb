@@ -1,20 +1,26 @@
 require 'faker'
 
-# 20.times do 
-#   Student.create!(
-#   first_name: Faker::Name.first_name,
-#   last_name: Faker::Name.last_name,
-#   email: Faker::Internet.email,
-#   phone_number: Faker::PhoneNumber.phone_number,
-#   short_bio: "This is a bio",
-#   linkedin_url: Faker::Internet.url,
-#   twitter_url: Faker::Twitter.user,
-#   blog_url: Faker::Internet.url,
-#   resume_url: Faker::Internet.url,
-#   github_url: Faker::Internet.url,
-#   photo: "This is a photo"
-#   )
-# end
+Student.delete_all
+Education.delete_all
+Experience.delete_all
+Capstone.delete_all
+Skill.delete_all
+
+20.times do 
+  Student.create!(
+  first_name: Faker::Name.first_name,
+  last_name: Faker::Name.last_name,
+  email: Faker::Internet.email,
+  phone_number: Faker::PhoneNumber.phone_number,
+  short_bio: "This is a bio",
+  linkedin_url: Faker::Internet.url,
+  twitter_url: Faker::Twitter.user,
+  blog_url: Faker::Internet.url,
+  resume_url: Faker::Internet.url,
+  github_url: Faker::Internet.url,
+  photo: "This is a photo"
+  )
+end
 
 
 20.times do 
