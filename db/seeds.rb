@@ -14,7 +14,7 @@ Skill.delete_all
   phone_number: Faker::PhoneNumber.phone_number,
   short_bio: "This is a bio",
   linkedin_url: Faker::Internet.url,
-  twitter_url: Faker::Twitter.user,
+  twitter_url: "sdfkjsdf.com",
   blog_url: Faker::Internet.url,
   resume_url: Faker::Internet.url,
   github_url: Faker::Internet.url,
